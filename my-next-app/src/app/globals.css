@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  max-width: 1630px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.subtitle {
+  font-size: 24px;
+  font-weight: 700;
+}
+.title {
+  font-size: 36px;
+  font-weight: 700;
+}
+.text {
+  font-size: 18px;
+  font-weight: 500;
+}
+.faq__step:not(.faq__step:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 14px;
+  width: 2px;
+  height: calc(100% - 30px);
+  background-color: lightgray;
+}
