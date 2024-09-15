@@ -108,17 +108,18 @@ const Home = () => {
         <section id='faq' className='faq'>
           <div className="faq__container container">
             <h2 className='subtitle mb-9'>FAQ</h2>
-            <div className='faq__content flex justify-between items-center'>
+            <div className='faq__content flex justify-between items-center mb-11'>
               <nav className='faq__steps'>
                 <ul className='flex flex-col gap-3'>
                   <li className='faq__step relative flex items-start gap-5'>
                     <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
                     items-center justify-center'>1</span>
                     <div>
+                      {/* <Image src={} width={} height={} alt='example work photo'/> */}
                       <p className='text max-w-[600px]'>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Neque, laudantium. Lorem ipsum dolor sit amet, 
-                        consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur 
+                      In the emails section, you can choose the email of your choice. 
+                      In the assortment there are both paid and free emails that you can use.
+                       You can buy a paid e-mail or use a free one. 
                       </p>
                     </div>
                   </li>
@@ -127,14 +128,55 @@ const Home = () => {
                     items-center justify-center'>2</span>
                     <div className='flex flex-col gap-4'>
                       {/* <Image src={} width={} height={} alt='example work photo'/> */}
-                      <p className='text max-w-[600px]'>Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Neque, laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias doloremque nihil obcaecati minus hic, accusantium, ea necessitatibus eveniet nobis aspernatur praesentium explicabo laborum doloribus nostrum quae iste saepe commodi laboriosam nam porro consectetur placeat reprehenderit, distinctio accusamus! Mollitia atque incidunt nemo eligendi quia quis eaque, nulla impedit quisquam veritatis laborum omnis ipsam, maxime, voluptates repudiandae possimus a ab vel corporis animi. Ducimus, cupiditate. Praesentium voluptatibus porro suscipit voluptatem! Quis ut perferendis ducimus eligendi voluptatem animi quibusdam temporibus labore laborum ipsam? Officia fugiat veritatis nihil tenetur aliquid autem minus enim obcaecati, ea aut recusandae, facilis unde cumque fugit cum natus? Consectetur.
+                      <p className='text max-w-[600px]'>
+                      Once you have purchased the email you want, 
+                      click on your account icon and go to the purchased emails page. 
+                      There you will be able to see the number of purchased emails 
+                      and the button to use them. 
+                      </p>
+                    </div>
+                  </li>
+                  <li className='faq__step relative flex items-start gap-5'>
+                    <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
+                    items-center justify-center'>3</span>
+                    <div className='flex flex-col gap-4'>
+                      {/* <Image src={} width={} height={} alt='example work photo'/> */}
+                      <p className='text max-w-[600px]'>
+                      When you click the use button, copy the e-mail text, 
+                      then select the mailbox through which you want to send it. 
+                      After these steps, the desired mailbox will be opened.
+                      </p>
+                    </div>
+                  </li>
+                  <li className='faq__step relative flex items-start gap-5'>
+                    <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
+                    items-center justify-center'>4</span>
+                    <div className='flex flex-col gap-4'>
+                      {/* <Image src={} width={} height={} alt='example work photo'/> */}
+                      <p className='text max-w-[600px]'>
+                      Next, click the send message button, select who you want to send it to,
+                       then paste the text you copied earlier into the message entry field.
+                      </p>
+                    </div>
+                  </li>
+                  <li className='faq__step relative flex items-start gap-5'>
+                    <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
+                    items-center justify-center'>5</span>
+                    <div className='flex flex-col gap-4'>
+                      {/* <Image src={} width={} height={} alt='example work photo'/> */}
+                      <p className='text max-w-[600px]'>
+                      Congratulations, in just 5 easy steps you've sent beautifully 
+                      designed messages to the right person.
                       </p>
                     </div>
                   </li>
                 </ul>
               </nav>
               <div className='faq__gallery'></div>
+            </div>
+            <div className='faq__who'>
+              <h2 className='faq__whotitle subtitle'>Who it's good for?</h2>
+              <div className='faq__whocontent'></div>
             </div>
           </div>
         </section>
