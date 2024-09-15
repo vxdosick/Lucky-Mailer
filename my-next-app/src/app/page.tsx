@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import logo from "@/app/public/images/logo.svg"
+import { CartButton } from './components/CartButton'
 const Home = () => {
   return (
     <div className="wrapper">
@@ -29,10 +30,22 @@ const Home = () => {
               <nav className="mails__menu">
                 <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
                  gap-6">
-                  <li className="bg-slate-500">11112</li>
-                  <li className="bg-slate-500">11112</li>
-                  <li className="bg-slate-500">11112</li>
-                  <li className="bg-slate-500">11112</li>
+                  <li className="rounded-md">
+                    <Image src={"/"} layout='responsive' width={100} height={50} 
+                    alt="product image" className='border-yellow-400 border rounded-md mb-5' />
+                    <h3 className='card__title mb-2'>Lorem</h3>
+                    <p className='mb-5 small__text'>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                       Nulla, dignissimos?
+                    </p>
+                    <div className='flex items-center justify-between'>
+                      <span className='text'>2.5$</span>
+                      <CartButton cart = {false} />
+                    </div>
+                  </li>
+                  <li className="rounded-md"></li>
+                  <li className="rounded-md"></li>
+                  <li className="rounded-md"></li>
                 </ul>
               </nav>
             </div>
@@ -48,9 +61,10 @@ const Home = () => {
                     <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
                     items-center justify-center'>1</span>
                     <div>
-                      <p className='text max-w-[600px]'>Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Neque, laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur 
-                        
+                      <p className='text max-w-[600px]'>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Neque, laudantium. Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur 
                       </p>
                     </div>
                   </li>

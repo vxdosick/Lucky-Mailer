@@ -16,16 +16,55 @@
   font-size: 36px;
   font-weight: 700;
 }
+.card__title {
+  font-size: 20px;
+  font-weight: 500;
+}
 .text {
   font-size: 18px;
   font-weight: 500;
 }
+.small__text {
+  font-size: 16px;
+  font-weight: 400;
+}
 .faq__step:not(.faq__step:last-child)::before {
   content: '';
   position: absolute;
-  top: 35px;
+  top: 36px;
   left: 14px;
   width: 2px;
   height: calc(100% - 30px);
   background-color: lightgray;
+}
+.button__general {
+  font-size: 20px;
+  font-weight: 500;
+  border: 2px solid crimson;
+  border-radius: 6px;
+  background-color: pink;
+  padding: 1px 30px;
+  transition: all 0.3s ease;
+}
+.button__secondary {
+  font-size: 20px;
+  font-weight: 500;
+  border: 2px solid rgb(76, 76, 76);
+  border-radius: 6px;
+  background-color: rgb(185, 185, 185);
+  padding: 1px 30px;
+  transition: all 0.3s ease;
+}
+.button__general:hover {
+  transform: scale(1.05);   
+  background-color: crimson;
+  color: white;
+}
+.button__secondary:hover {
+  transform: scale(1.05);   
+  background-color: rgb(76, 76, 76);
+  color: white;
+}
+.button__general, .button__secondary:active {
+  transform: scale(0.90);
 }
