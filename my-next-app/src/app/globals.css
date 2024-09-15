@@ -13,7 +13,7 @@
   font-weight: 700;
 }
 .title {
-  font-size: 36px;
+  font-size: 50px;
   font-weight: 700;
 }
 .card__title {
@@ -60,6 +60,19 @@
   background-color: crimson;
   color: white;
 }
+.link__general {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 2px 30px;
+  background-color: rgb(190, 120, 255);
+  border-radius: 6px;
+  border: 2px solid rgb(149, 35, 255);
+  transition: all 0.3s ease;
+}
+.link__general:hover {
+  background-color: rgb(143, 23, 255);
+  color: white;
+}
 .button__secondary:hover {
   transform: scale(1.05);   
   background-color: rgb(76, 76, 76);
@@ -67,4 +80,7 @@
 }
 .button__general, .button__secondary:active {
   transform: scale(0.90);
+}
+.header {
+  background-color: unset;
 }
