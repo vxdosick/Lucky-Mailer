@@ -4,8 +4,9 @@ import { useState } from 'react'
 interface CartButtonProps {
     cart: boolean;
     link: boolean;
+    free: boolean;
 }
-export const CartButton = ({cart, link}: CartButtonProps) => {
+export const CartButton = ({cart, link, free}: CartButtonProps) => {
     const [isIncart, setIsInCart] = useState(cart)
     if(link) {
         return (
@@ -20,9 +21,10 @@ export const CartButton = ({cart, link}: CartButtonProps) => {
     if (!link) {
         return (
             <button onClick={() => setIsInCart(!isIncart)} 
-            className={`${isIncart ? "button__secondary" : "button__general"}`}
-            >
-                {isIncart ? "Remove" : "Add to cart"}
+            className={`
+                ${free ? "button__general" : isIncart ? "button__secondary" : "button__general"}
+                `}>
+                {free ? "Copy mail" : isIncart ? "Remove" : "Add to cart"}
             </button>
         )
     }

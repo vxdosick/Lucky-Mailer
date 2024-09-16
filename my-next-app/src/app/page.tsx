@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Image from 'next/image'
 import { CartButton } from './components/CartButton'
 import dynamic from "next/dynamic";
@@ -15,6 +14,7 @@ const Home = () => {
     text: string;
     image: string;
     price: number | string;
+    free: boolean;
   }
   const mails: Mails[] = [
     {
@@ -22,28 +22,32 @@ const Home = () => {
       title: "Lorem",
       text: "lorem some text info about mt mails products",
       image: "/",
-      price: 100
+      price: "Free",
+      free: true
     },
     {
       id: Date.now(),
       title: "Lorem",
       text: "lorem some text info about mt mails products",
       image: "/",
-      price: 100
+      price: 100,
+      free: false
     },
     {
       id: Date.now(),
       title: "Lorem",
       text: "lorem some text info about mt mails products",
       image: "/",
-      price: 100
+      price: "Free",
+      free: true
     },
     {
       id: Date.now(),
       title: "Lorem",
       text: "lorem some text info about mt mails products",
       image: "/",
-      price: 100
+      price: 100,
+      free: false
     },
   ]
 
@@ -70,10 +74,9 @@ const Home = () => {
           justify-center items-center relative">
               <div className='hero__content px-[15px] flex items-center gap-4 justify-between '>
                 <div className='hero__info max-w-[600px]'>
-                  <h1 className='title'>Lorem ipsum dolor sit.</h1>
-                  <p className='mb-10 text'>Lorem ipsum dolor sit amet consectetur adipisicing
-                     elit. Veritatis culpa quisquam, maxime quae in eius quibusdam consectetur
-                      labore a debitis.</p>
+                  <h1 className='title'>Lucky Mailer is the new future for email</h1>
+                  <p className='mb-10 text'>Create your own unique communication style 
+                    in a world of emails that no day goes by without them.</p>
                   <a href="#mails" className="link__general">
                     See all mails <span className="hero__linkdecor">&#8594;</span>
                   </a>
@@ -101,8 +104,8 @@ const Home = () => {
                         {mail.text}
                       </p>
                       <div className='flex items-center justify-between'>
-                        <span className='text'>{mail.price}$</span>
-                        <CartButton cart={false} link={false} />
+                        <span className='text'>{mail.price}{mail.free ? "" : "$"}</span>
+                        <CartButton cart={false} link={false} free={mail.free} />
                       </div>
                     </li>
                   ))}
