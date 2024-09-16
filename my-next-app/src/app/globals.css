@@ -8,6 +8,9 @@
   padding-right: 15px;
   padding-left: 15px;
 }
+.hero--container {
+  max-width: 1300px;
+}
 .subtitle {
   font-size: 24px;
   font-weight: 700;

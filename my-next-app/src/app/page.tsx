@@ -1,7 +1,14 @@
+import { useState } from 'react'
 import Image from 'next/image'
 import { CartButton } from './components/CartButton'
-import { ModelAnimation } from './components/ModelAnimation'
+import dynamic from "next/dynamic";
+
+const ModelAnimation = dynamic(() => import("./components/ModelAnimation"), {
+  ssr: false,
+});
+
 const Home = () => {
+
   interface Mails {
     id: number;
     title: string;
@@ -59,10 +66,10 @@ const Home = () => {
       </header>
       <main className="main">
         <section className="hero mb-11">
-          <div className="hero__container w-full h-[100vh] bg-pink-300 relative">
-              <div className='hero__content absolute top-1/2 left-1/2 translate-x-[-50%]
-               translate-y-[-50%] flex items-center gap-4'>
-                <div>
+          <div className="hero__container w-full h-[100vh] bg-pink-300 flex 
+          justify-center items-center relative">
+              <div className='hero__content px-[15px] flex items-center gap-4 justify-between '>
+                <div className='hero__info max-w-[600px]'>
                   <h1 className='title'>Lorem ipsum dolor sit.</h1>
                   <p className='mb-10 text'>Lorem ipsum dolor sit amet consectetur adipisicing
                      elit. Veritatis culpa quisquam, maxime quae in eius quibusdam consectetur
@@ -71,7 +78,7 @@ const Home = () => {
                     See all mails <span className="hero__linkdecor">&#8594;</span>
                   </a>
                 </div>
-                <div className='hero__decor max-w-[300px] max-h-[300px]'>
+                <div className='hero__decor max-w-[500px] max-h-[500px]'>
                   <ModelAnimation />
                 </div>
               </div>
@@ -81,7 +88,7 @@ const Home = () => {
           <div className="mails__container container">
             <h2 className='subtitle mb-9'>Mails</h2>
             <div className="mails__products">
-              <nav className="mails__menu">
+              <nav className="mails__menu mb-9">
                 <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
                  gap-6">
                   {mails.map(mail => (
@@ -101,6 +108,11 @@ const Home = () => {
                   ))}
                 </ul>
               </nav>
+              <div className='mails__all w-full text-start'>
+                <a href="/allmails" className="link__general">
+                    More... <span className="hero__linkdecor">&#8594;</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
