@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import logo from "@/app/public/images/logo.svg"
 import { CartButton } from './components/CartButton'
 import { ModelAnimation } from './components/ModelAnimation'
 const Home = () => {
@@ -47,7 +46,7 @@ const Home = () => {
         <div className="header__container shadow-bottom flex items-center justify-between
          container py-3">
           <a href="/" className='header__logo flex items-center gap-3'>
-            <Image src={logo} width={90} height={90} alt="logo"/>
+            <Image src={"/images/logo.svg"} width={90} height={90} alt="logo"/>
             <span className='font-[700] text-2xl'>Lucky Mailer</span>
           </a>
           <nav className="header__menu text">
@@ -175,8 +174,34 @@ const Home = () => {
               <div className='faq__gallery'></div>
             </div>
             <div className='faq__who'>
-              <h2 className='faq__whotitle subtitle'>Who it's good for?</h2>
-              <div className='faq__whocontent'></div>
+              <h2 className='faq__whotitle subtitle mb-9'>Who it's good for?</h2>
+              <div className='faq__whocontent flex items-start justify-between flex-wrap 
+              gap-9'>
+                  <div className='faq__whoitem min-w-[300px] max-w-[500px] 
+                  flex items-start gap-3 mx-auto'>
+                    <Image src={"/images/who/company.png"} width={100} height={100} 
+                    alt="example photo" />
+                    <p className='text'>If you have a firm and you need to send email
+                       newsletters to 
+                      your employees or clients.</p>
+                  </div>
+                  <div className='faq__whoitem min-w-[300px] max-w-[500px] flex items-start 
+                  gap-3 mx-auto'>
+                    <Image src={"/images/who/mail.png"} width={100} height={100} 
+                    alt="example photo" />
+                    <p className='text'>If you have an email marketing firm and you need
+                       beautiful emails 
+                      to attract clients.</p>
+                  </div>
+                  <div className='faq__whoitem min-w-[300px] max-w-[500px] flex items-start 
+                  gap-3 mx-auto'>
+                    <Image src={"/images/who/people.png"} width={100} height={100} 
+                    alt="example photo" />
+                    <p className='text'>If you want to congratulate someone or just want to
+                       remind your family,
+                       coworkers, friends or loved ones.</p>
+                  </div>
+              </div>
             </div>
           </div>
         </section>
@@ -185,7 +210,7 @@ const Home = () => {
         <div className="footer__container container">
           <div className="footer__logo w-full flex justify-center">
             <a href="/" className='flex items-center gap-3'>
-              <Image src={logo} width={60} height={60} alt="logo"/>
+              <Image src={"/images/logo.svg"} width={60} height={60} alt="logo"/>
               <span className='font-[700] text-xl'>Lucky Mailer</span>
             </a>
           </div>
