@@ -69,7 +69,7 @@ const Home = () => {
         </div>
       </header>
       <main className="main">
-        <section className="hero mb-11">
+        <section className="hero">
           <div className="hero__container w-full h-[100vh] bg-pink-300 flex 
           justify-center items-center relative">
               <div className='hero__content px-[15px] flex items-center gap-4 justify-between '>
@@ -87,7 +87,7 @@ const Home = () => {
               </div>
           </div>
         </section>
-        <section id='mails' className="mails mb-11">
+        <section id='mails' className="mails pt-11">
           <div className="mails__container container">
             <h2 className='subtitle mb-9'>Mails</h2>
             <div className="mails__products">
@@ -96,7 +96,8 @@ const Home = () => {
                  gap-6">
                   {mails.map(mail => (
                     <li key={mail.id} className="rounded-md">
-                      <Image src={mail.image} layout='responsive' width={100} height={50}
+                      <Image  
+                      src={mail.image} layout='responsive' width={100} height={50}
                       alt="product image" className='border-yellow-400 border rounded-md 
                       mb-5' />
                       <h3 className='card__title mb-2'>{mail.title}</h3>
@@ -119,17 +120,18 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section id='faq' className='faq'>
+        <section id='faq' className='faq pt-11'>
           <div className="faq__container container">
             <h2 className='subtitle mb-9'>FAQ</h2>
             <div className='faq__content flex justify-between items-center mb-11'>
               <nav className='faq__steps'>
-                <ul className='flex flex-col gap-3'>
+                <ul className='flex flex-col gap-10'>
                   <li className='faq__step relative flex items-start gap-5'>
                     <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
                     items-center justify-center'>1</span>
                     <div>
-                      {/* <Image src={} width={} height={} alt='example work photo'/> */}
+                      <Image src={"/images/faq/products.svg"} width={100} height={100}
+                       alt='example work photo' className='mb-5 mx-auto'/>
                       <p className='text max-w-[600px]'>
                       In the emails section, you can choose the email of your choice. 
                       In the assortment there are both paid and free emails that you can use.
@@ -141,7 +143,8 @@ const Home = () => {
                     <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
                     items-center justify-center'>2</span>
                     <div className='flex flex-col gap-4'>
-                      {/* <Image src={} width={} height={} alt='example work photo'/> */}
+                      <Image src={"/images/faq/select.svg"} width={100} height={100}
+                       alt='example work photo' className='mb-5 mx-auto'/>
                       <p className='text max-w-[600px]'>
                       Once you have purchased the email you want, 
                       click on your account icon and go to the purchased emails page. 
@@ -154,7 +157,8 @@ const Home = () => {
                     <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
                     items-center justify-center'>3</span>
                     <div className='flex flex-col gap-4'>
-                      {/* <Image src={} width={} height={} alt='example work photo'/> */}
+                    <Image src={"/images/faq/mail.svg"} width={100} height={100}
+                       alt='example work photo' className='mb-5 mx-auto'/>
                       <p className='text max-w-[600px]'>
                       When you click the use button, copy the e-mail text, 
                       then select the mailbox through which you want to send it. 
@@ -166,7 +170,8 @@ const Home = () => {
                     <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
                     items-center justify-center'>4</span>
                     <div className='flex flex-col gap-4'>
-                      {/* <Image src={} width={} height={} alt='example work photo'/> */}
+                    <Image src={"/images/faq/send.svg"} width={100} height={100}
+                       alt='example work photo' className='mb-5 mx-auto'/>
                       <p className='text max-w-[600px]'>
                       Next, click the send message button, select who you want to send it to,
                        then paste the text you copied earlier into the message entry field.
@@ -177,12 +182,17 @@ const Home = () => {
                     <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
                     items-center justify-center'>5</span>
                     <div className='flex flex-col gap-4'>
-                      {/* <Image src={} width={} height={} alt='example work photo'/> */}
+                    <Image src={"/images/faq/congratulation.svg"} width={100} height={100}
+                       alt='example work photo' className='mb-5 mx-auto'/>
                       <p className='text max-w-[600px]'>
                       Congratulations, in just 5 easy steps you've sent beautifully 
                       designed messages to the right person.
                       </p>
                     </div>
+                  </li>
+                  <li className='faq__step relative flex items-start gap-5'>
+                    <Image src={"/images/faq/end.svg"} width={100} height={100} alt="end"
+                    className='w-[30px] h-[30px]' />
                   </li>
                 </ul>
               </nav>
@@ -223,11 +233,12 @@ const Home = () => {
       </main>
       <footer className="footer border-t-[1px] border-pink-300 py-1 mt-8">
         <div className="footer__container container">
-          <div className="footer__logo w-full flex justify-center">
-            <a href="/" className='flex items-center gap-3'>
+          <div className="footer__logo w-full flex justify-center flex-col items-center">
+            <a href="/" className='flex items-center gap-3 mb-2'>
               <Image src={"/images/logo.svg"} width={60} height={60} alt="logo"/>
               <span className='font-[700] text-xl'>Lucky Mailer</span>
             </a>
+            <a href="#" className='hover:underline'>Privacy Policy</a>
           </div>
         </div>
       </footer>

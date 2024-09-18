@@ -34,7 +34,7 @@
 .faq__step:not(.faq__step:last-child)::before {
   content: '';
   position: absolute;
-  top: 36px;
+  top: 47px;
   left: 14px;
   width: 2px;
   height: calc(100% - 30px);
