@@ -1,56 +1,21 @@
 import Image from 'next/image'
-import { CartButton } from './components/CartButton'
 import dynamic from "next/dynamic";
+import { GetTopMails } from './components/GetTopMails';
 
 const ModelAnimation = dynamic(() => import("./components/ModelAnimation"), {
   ssr: false,
 });
 
-const Home = () => {
+interface Mails {
+  id: number;
+  title: string;
+  text: string;
+  image: string;
+  price: number | string;
+  free: boolean;
+}
 
-  interface Mails {
-    id: number;
-    title: string;
-    text: string;
-    image: string;
-    price: number | string;
-    free: boolean;
-  }
-  const mails: Mails[] = [
-    {
-      id: Date.now(),
-      title: "Lorem",
-      text: "lorem some text info about mt mails products",
-      image: "/",
-      price: "Free",
-      free: true
-    },
-    {
-      id: Date.now(),
-      title: "Lorem",
-      text: "lorem some text info about mt mails products",
-      image: "/",
-      price: 100,
-      free: false
-    },
-    {
-      id: Date.now(),
-      title: "Lorem",
-      text: "lorem some text info about mt mails products",
-      image: "/",
-      price: "Free",
-      free: true
-    },
-    {
-      id: Date.now(),
-      title: "Lorem",
-      text: "lorem some text info about mt mails products",
-      image: "/",
-      price: 100,
-      free: false
-    },
-  ]
-
+const Home = ({mails}: {mails: Mails[]}) => {
   return (
     <div className="wrapper">
       <header className="header fixed z-10 w-full backdrop-blur-md border-b- border-white-300">
@@ -94,22 +59,7 @@ const Home = () => {
               <nav className="mails__menu mb-9">
                 <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
                  gap-6">
-                  {mails.map(mail => (
-                    <li key={mail.id} className="rounded-md">
-                      <Image  
-                      src={mail.image} layout='responsive' width={100} height={50}
-                      alt="product image" className='border-yellow-400 border rounded-md 
-                      mb-5' />
-                      <h3 className='card__title mb-2'>{mail.title}</h3>
-                      <p className='mb-5 small__text'>
-                        {mail.text}
-                      </p>
-                      <div className='flex items-center justify-between'>
-                        <span className='text'>{mail.price}{mail.free ? "" : "$"}</span>
-                        <CartButton cart={false} link={false} free={mail.free} />
-                      </div>
-                    </li>
-                  ))}
+                  <GetTopMails />
                 </ul>
               </nav>
               <div className='mails__all w-full text-start'>

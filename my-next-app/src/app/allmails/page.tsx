@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { CartButton } from '../components/CartButton'
+import { GetAllMails } from '../components/GetAllMails';
 const addmails = () => {
 
     interface Mails {
@@ -89,24 +89,7 @@ const addmails = () => {
                             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
                             lg:grid-cols-4
                              gap-6">
-                              {mails.map(mail => (
-                                <li key={mail.id} className="rounded-md">
-                                  <Image  
-                                  src={mail.image} layout='responsive' width={100} height={50}
-                                  alt="product image" className='border-yellow-400 
-                                  border rounded-md 
-                                  mb-5' />
-                                  <h3 className='card__title mb-2'>{mail.title}</h3>
-                                  <p className='mb-5 small__text'>
-                                    {mail.text}
-                                  </p>
-                                  <div className='flex items-center justify-between'>
-                                    <span className='text'>{mail.price}{mail.free ? "" : "$"}
-                                    </span>
-                                    <CartButton cart={false} link={false} free={mail.free} />
-                                  </div>
-                                </li>
-                              ))}
+                              <GetAllMails />
                             </ul>
                           </nav>
                       </div>
