@@ -1,24 +1,15 @@
 import Image from 'next/image'
 import dynamic from "next/dynamic";
-import { GetTopMails } from './components/GetTopMails';
+import { GetAllMails } from './components/GetAllMails';
 
 const ModelAnimation = dynamic(() => import("./components/ModelAnimation"), {
   ssr: false,
 });
 
-interface Mails {
-  id: number;
-  title: string;
-  text: string;
-  image: string;
-  price: number | string;
-  free: boolean;
-}
-
-const Home = ({mails}: {mails: Mails[]}) => {
+const Home = () => {
   return (
     <div className="wrapper">
-      <header className="header fixed z-10 w-full backdrop-blur-md border-b- border-white-300">
+      <header className="header fixed z-10 w-full backdrop-blur-md">
         <div className="header__container shadow-bottom flex items-center justify-between
          container py-3">
           <a href="/" className='header__logo flex items-center gap-3'>
@@ -43,7 +34,7 @@ const Home = ({mails}: {mails: Mails[]}) => {
                   <p className='mb-10 text'>Create your own unique communication style 
                     in a world of emails that no day goes by without them.</p>
                   <a href="#mails" className="link__general">
-                    See all mails <span className="hero__linkdecor">&#8594;</span>
+                    See top mails <span className="hero__linkdecor">&#8594;</span>
                   </a>
                 </div>
                 <div className='hero__decor max-w-[500px] max-h-[500px]'>
@@ -59,7 +50,7 @@ const Home = ({mails}: {mails: Mails[]}) => {
               <nav className="mails__menu mb-9">
                 <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
                  gap-6">
-                  <GetTopMails />
+                  <GetAllMails />
                 </ul>
               </nav>
               <div className='mails__all w-full text-start'>

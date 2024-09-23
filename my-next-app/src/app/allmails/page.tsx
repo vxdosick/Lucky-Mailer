@@ -2,49 +2,6 @@ import Image from 'next/image'
 import { GetAllMails } from '../components/GetAllMails';
 const addmails = () => {
 
-    interface Mails {
-        id: number;
-        title: string;
-        text: string;
-        image: string;
-        price: number | string;
-        free: boolean;
-      }
-      const mails: Mails[] = [
-        {
-          id: Date.now(),
-          title: "Lorem",
-          text: "lorem some text info about mt mails products",
-          image: "/",
-          price: "Free",
-          free: true
-        },
-        {
-          id: Date.now(),
-          title: "Lorem",
-          text: "lorem some text info about mt mails products",
-          image: "/",
-          price: 100,
-          free: false
-        },
-        {
-          id: Date.now(),
-          title: "Lorem",
-          text: "lorem some text info about mt mails products",
-          image: "/",
-          price: "Free",
-          free: true
-        },
-        {
-          id: Date.now(),
-          title: "Lorem",
-          text: "lorem some text info about mt mails products",
-          image: "/",
-          price: 100,
-          free: false
-        },
-      ]
-
     return (
         <div className="wrapper">
             <header className="header fixed z-10 w-full backdrop-blur-md border-b 
@@ -70,7 +27,7 @@ const addmails = () => {
                       <div className="mails__products">
                           <div className='mails__filter w-full border border-lightgray-300 py-3 
                           rounded-md mb-11 px-5'>
-                              <nav className='filter__menu'>
+                              <nav className='filter__menu mb-9'>
                                 <ul className='flex items-center justify-between'>
                                     <li><button>test</button></li>
                                     <li><button>test</button></li>
@@ -92,6 +49,7 @@ const addmails = () => {
                               <GetAllMails />
                             </ul>
                           </nav>
+                          <a href="/" className='link__general'>&#8592;</a>
                       </div>
                     </div>
                 </section>

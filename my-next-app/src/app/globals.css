@@ -59,7 +59,6 @@
   transition: all 0.3s ease;
 }
 .button__general:hover {
-  transform: scale(1.05);   
   background-color: crimson;
   color: white;
 }
@@ -77,13 +76,31 @@
   color: white;
 }
 .button__secondary:hover {
-  transform: scale(1.05);   
   background-color: rgb(76, 76, 76);
   color: white;
 }
-.button__general, .button__secondary:active {
-  transform: scale(0.90);
-}
 .header {
   background-color: unset;
+}
+.card__modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(142, 169, 179, 0.18) !important;
+  z-index: 20;
+}
+.card__modalcontainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+  border-radius: 6px;
+  max-width: 700px;
+  height: 500px;
+  overflow: auto;
+  z-index: 30;
+  padding: 20px;
 }

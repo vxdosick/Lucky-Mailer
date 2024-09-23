@@ -1,30 +1,32 @@
 "use client"
-import { useState } from 'react'
 
 interface CartButtonProps {
-    cart: boolean;
-    link: boolean;
-    free: boolean;
+    cart?: boolean;
+    link?: boolean;
+    free?: boolean;
+    text?: string;
+    onClickFunc?: () => void;
 }
-export const CartButton = ({cart, link, free}: CartButtonProps) => {
-    const [isIncart, setIsInCart] = useState(cart)
+export const CartButton = ({cart, link, text, onClickFunc}: CartButtonProps) => {
+    // const [isIncart, setIsInCart] = useState(cart)
     if(link) {
         return (
-            <a onClick={() => setIsInCart(!isIncart)} 
+            <a 
             href="#"
-            className={`${isIncart ? "button__secondary" : "button__general"}`}
+            className={"button__secondary"}
+            // `${isIncart ? "button__secondary" : "button__general"}`
             >
-                {isIncart ? "Remove" : "Add to cart"}
+                {/* {isIncart ? "Remove" : "Add to cart"} */}
             </a>
         )
     }
     if (!link) {
         return (
-            <button onClick={() => setIsInCart(!isIncart)} 
-            className={`
-                ${free ? "button__general" : isIncart ? "button__secondary" : "button__general"}
-                `}>
-                {free ? "Copy mail" : isIncart ? "Remove" : "Add to cart"}
+            <button 
+                onClick={onClickFunc}
+                className={"button__general"}>
+                {/* {free ? "Copy mail" : isIncart ? "Remove" : "Add to cart"} */}
+                {text ? text : "Get mail"}
             </button>
         )
     }

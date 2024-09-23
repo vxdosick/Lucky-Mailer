@@ -2,61 +2,61 @@ import { NextResponse } from "next/server";
 
 export async function GET(req: Request) {
     return NextResponse.json([
-        {
-          id: Date.now(),
-          title: "Lorem1",
+      {
+        id: 1, 
+        title: "Mail 1", 
+        text: "lorem some text info about mt mails products",
+        image: "/",
+        price: "Free",
+        free: true
+      },
+      {
+        id: 2, 
+        title: "Mail 2", 
+        text: "lorem some text info about mt mails products",
+        image: "/",
+        price: "Free",
+        free: true
+      },
+      {
+        id: 3, 
+        title: "Mail 3", 
+        text: "lorem some text info about mt mails products",
+        image: "/",
+        price: "Free",
+        free: true
+      },
+      {
+        id: 4, 
+        title: "Mail 4", 
+        text: "lorem some text info about mt mails products",
+        image: "/",
+        price: "Free",
+        free: true
+      },
+      {
+          id: 5, 
+          title: "Mail 5", 
           text: "lorem some text info about mt mails products",
           image: "/",
           price: "Free",
           free: true
-        },
-        {
-          id: Date.now(),
-          title: "Lorem2",
-          text: "lorem some text info about mt mails products",
-          image: "/",
-          price: 100,
-          free: false
-        },
-        {
-          id: Date.now(),
-          title: "Lorem3",
+      },
+      {
+          id: 6, 
+          title: "Mail 6", 
           text: "lorem some text info about mt mails products",
           image: "/",
           price: "Free",
           free: true
-        },
-        {
-          id: Date.now(),
-          title: "Lorem4",
+      },
+      {
+          id: 7, 
+          title: "Mail 7", 
           text: "lorem some text info about mt mails products",
           image: "/",
-          price: 100,
-          free: false
-        },
-        {
-            id: Date.now(),
-            title: "Lorem4",
-            text: "lorem some text info about mt mails products",
-            image: "/",
-            price: 100,
-            free: false
-        },
-        {
-            id: Date.now(),
-            title: "Lorem4",
-            text: "lorem some text info about mt mails products",
-            image: "/",
-            price: 999,
-            free: false
-        },
-        {
-            id: Date.now(),
-            title: "Lorem4",
-            text: "lorem some text info about mt mails products",
-            image: "/",
-            price: 900,
-            free: false
-        },
+          price: "Free",
+          free: true
+      },
       ]);
 }

@@ -15,6 +15,8 @@ interface Mails {
 export const GetAllMails = () => {
   const [mails, setMails] = useState<Mails[]>([]);
   const [loading, setLoading] = useState(true);
+  const [mailProduct, setMailProduct] = useState<Mails | null>()
+  const [descriptionModal, setDescriptionModal] = useState(false)
 
   useEffect(() => {
     async function fetchData() {
@@ -31,6 +33,17 @@ export const GetAllMails = () => {
 
     fetchData();
   }, []);
+
+  const openDescription = (mail: Mails) => {
+    setMailProduct(mail);
+    setDescriptionModal(true);
+    document.body.style.overflow = 'hidden';
+  }
+  const closeDescription = () => {
+    setMailProduct(null);
+    setDescriptionModal(false);
+    document.body.style.overflow = 'auto';
+  }
 
   if (loading) {
     return <li><h2>Loading...</h2></li>;
@@ -52,8 +65,36 @@ export const GetAllMails = () => {
           <p className="mb-5 small__text">{mail.text}</p>
           <div className="flex items-center justify-between">
             <span className="text">{mail.price}{mail.free ? "" : "$"}</span>
-            <CartButton cart={false} link={false} free={mail.free} />
+            <CartButton cart={false} link={false} onClickFunc={() => openDescription(mail)} />
           </div>
+          {mailProduct && descriptionModal && (
+            <div onClick={closeDescription} className="card__modal">
+              <div className="card__modalcontainer" onClick={(e) => e.stopPropagation()}>
+                <div className="h-[300px] w-full relative">
+                  <Image src={mailProduct.image} layout="fill" objectFit="cover"
+                   alt="product image" />
+                </div>
+                <div className="">
+                  <h3 className="mb-2">{mailProduct.title}</h3>
+                  <p className="mb-5 small__text">{mailProduct.text}</p>
+                </div>
+                <div className="mb-[50px] flex flex-col gap-5 items-start ">
+                  <CartButton cart={false} link={false} text="Copy code" />
+                  <div className="w-full p-[10px] rounded-md bg-slate-500 
+                  text-white">
+                    {`
+                      if (a > b) {
+                        return 1;
+                      }
+                    `}
+                  </div>
+                </div>
+                <div className="w-full flex justify-end">
+                  <button onClick={closeDescription} className="link__general">Close</button>
+                </div>
+              </div>
+            </div>
+          )}
         </li>
       ))}
     </>
