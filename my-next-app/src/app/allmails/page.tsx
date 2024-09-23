@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { GetAllMails } from '../components/GetAllMails';
 const addmails = () => {
-
     return (
         <div className="wrapper">
             <header className="header fixed z-10 w-full backdrop-blur-md border-b 
@@ -12,26 +11,25 @@ const addmails = () => {
                         <Image src={"/images/logo.svg"} width={90} height={90} alt="logo"/>
                         <span className='font-[700] text-2xl'>Lucky Mailer</span>
                     </a>
-                    <nav className="header__menu text">
+                    {/* <nav className="header__menu text">
                       <ul className="flex items-center gap-8">
                         <li><a href="#mails">test</a></li>
                         <li><a href="#faq">test</a></li>
                       </ul>
-                    </nav>
+                    </nav> */}
                 </div>
             </header>
             <main className="main min-h-[calc(100vh-135px)] pt-[114px]">
                 <section id='mails' className="mails pt-11">
                     <div className="mails__container container">
-                      <h2 className='subtitle mb-9'>Mails</h2>
+                      <h2 className='subtitle mb-9'>All mails</h2>
                       <div className="mails__products">
                           <div className='mails__filter w-full border border-lightgray-300 py-3 
                           rounded-md mb-11 px-5'>
-                              <nav className='filter__menu mb-9'>
+                              <nav className='filter__menu'>
                                 <ul className='flex items-center justify-between'>
-                                    <li><button>test</button></li>
-                                    <li><button>test</button></li>
-                                    <li><button>test</button></li>
+                                    <li><button>New ones first</button></li>
+                                    <li><button>Old ones first</button></li>
                                     <li>
                                         <div>
                                             <input type="text" className='border 

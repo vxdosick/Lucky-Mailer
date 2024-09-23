@@ -8,7 +8,20 @@ export async function GET(req: Request) {
         text: "lorem some text info about mt mails products",
         image: "/",
         price: "Free",
-        free: true
+        free: true,
+        code: `
+        async function fetchData() {
+          try {
+            const result = await fetch('/api/all-mails');
+            const getMails: Mails[] = await result.json();
+            setMails(getMails);
+          } catch (error) {
+            console.error("Error fetching mails:", error);
+          } finally {
+            setLoading(false);
+          }
+        }
+        `
       },
       {
         id: 2, 
@@ -16,7 +29,20 @@ export async function GET(req: Request) {
         text: "lorem some text info about mt mails products",
         image: "/",
         price: "Free",
-        free: true
+        free: true,
+        code: `
+        async function fetchData() {
+          try {
+            const result = await fetch('/api/all-mails');
+            const getMails: Mails[] = await result.json();
+            setMails(getMails);
+          } catch (error) {
+            console.error("Error fetching mails:", error);
+          } finally {
+            setLoading(false);
+          }
+        }
+        `
       },
       {
         id: 3, 
@@ -24,7 +50,20 @@ export async function GET(req: Request) {
         text: "lorem some text info about mt mails products",
         image: "/",
         price: "Free",
-        free: true
+        free: true,
+        code: `
+        async function fetchData() {
+          try {
+            const result = await fetch('/api/all-mails');
+            const getMails: Mails[] = await result.json();
+            setMails(getMails);
+          } catch (error) {
+            console.error("Error fetching mails:", error);
+          } finally {
+            setLoading(false);
+          }
+        }
+        `
       },
       {
         id: 4, 
@@ -32,7 +71,20 @@ export async function GET(req: Request) {
         text: "lorem some text info about mt mails products",
         image: "/",
         price: "Free",
-        free: true
+        free: true,
+        code: `
+        async function fetchData() {
+          try {
+            const result = await fetch('/api/all-mails');
+            const getMails: Mails[] = await result.json();
+            setMails(getMails);
+          } catch (error) {
+            console.error("Error fetching mails:", error);
+          } finally {
+            setLoading(false);
+          }
+        }
+        `
       },
       {
           id: 5, 
@@ -40,7 +92,20 @@ export async function GET(req: Request) {
           text: "lorem some text info about mt mails products",
           image: "/",
           price: "Free",
-          free: true
+          free: true,
+          code: `
+          async function fetchData() {
+            try {
+              const result = await fetch('/api/all-mails');
+              const getMails: Mails[] = await result.json();
+              setMails(getMails);
+            } catch (error) {
+              console.error("Error fetching mails:", error);
+            } finally {
+              setLoading(false);
+            }
+          }
+          `
       },
       {
           id: 6, 
@@ -48,7 +113,20 @@ export async function GET(req: Request) {
           text: "lorem some text info about mt mails products",
           image: "/",
           price: "Free",
-          free: true
+          free: true,
+          code: `
+          async function fetchData() {
+            try {
+              const result = await fetch('/api/all-mails');
+              const getMails: Mails[] = await result.json();
+              setMails(getMails);
+            } catch (error) {
+              console.error("Error fetching mails:", error);
+            } finally {
+              setLoading(false);
+            }
+          }
+          `
       },
       {
           id: 7, 
@@ -56,7 +134,20 @@ export async function GET(req: Request) {
           text: "lorem some text info about mt mails products",
           image: "/",
           price: "Free",
-          free: true
+          free: true,
+          code: `
+          async function fetchData() {
+            try {
+              const result = await fetch('/api/all-mails');
+              const getMails: Mails[] = await result.json();
+              setMails(getMails);
+            } catch (error) {
+              console.error("Error fetching mails:", error);
+            } finally {
+              setLoading(false);
+            }
+          }
+          `
       },
       ]);
 }

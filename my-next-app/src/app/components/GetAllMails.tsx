@@ -10,6 +10,7 @@ interface Mails {
   image: string;
   price: number | string;
   free: boolean;
+  code: string;
 }
 
 export const GetAllMails = () => {
@@ -17,6 +18,7 @@ export const GetAllMails = () => {
   const [loading, setLoading] = useState(true);
   const [mailProduct, setMailProduct] = useState<Mails | null>()
   const [descriptionModal, setDescriptionModal] = useState(false)
+  const [copied, setCopied] = useState(false)
 
   useEffect(() => {
     async function fetchData() {
@@ -42,6 +44,7 @@ export const GetAllMails = () => {
   const closeDescription = () => {
     setMailProduct(null);
     setDescriptionModal(false);
+    setCopied(false);
     document.body.style.overflow = 'auto';
   }
 
@@ -75,18 +78,23 @@ export const GetAllMails = () => {
                    alt="product image" />
                 </div>
                 <div className="">
-                  <h3 className="mb-2">{mailProduct.title}</h3>
+                  <h3 className="card__title mb-2">{mailProduct.title}</h3>
                   <p className="mb-5 small__text">{mailProduct.text}</p>
                 </div>
                 <div className="mb-[50px] flex flex-col gap-5 items-start ">
-                  <CartButton cart={false} link={false} text="Copy code" />
-                  <div className="w-full p-[10px] rounded-md bg-slate-500 
+                  <CartButton cart={false} link={false} 
+                  text={copied ? "Code copied" : "Copy code"} 
+                  onClickFunc={() => {
+                    navigator.clipboard.writeText(mailProduct.code);
+                    setCopied(true);
+                  }} />
+                  <div className="card__modalcode w-full p-[10px] rounded-md bg-slate-500 
                   text-white">
-                    {`
-                      if (a > b) {
-                        return 1;
-                      }
-                    `}
+                    <pre style={{whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}>
+                      <code>
+                        {mailProduct.code}
+                      </code>
+                    </pre>
                   </div>
                 </div>
                 <div className="w-full flex justify-end">
