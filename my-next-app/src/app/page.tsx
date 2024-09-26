@@ -9,7 +9,8 @@ const ModelAnimation = dynamic(() => import("./components/ModelAnimation"), {
 const Home = () => {
   return (
     <div className="wrapper">
-      <header className="header fixed z-10 w-full backdrop-blur-md">
+      <header className="header fixed z-10 w-full backdrop-blur-md border-b 
+            border-white-300">
         <div className="header__container shadow-bottom flex items-center justify-between
          container py-3">
           <a href="/" className='header__logo flex items-center gap-3'>
@@ -68,7 +69,7 @@ const Home = () => {
               <nav className='faq__steps'>
                 <ul className='flex flex-col gap-10'>
                   <li className='faq__step relative flex items-start gap-5'>
-                    <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
+                    <span className='rounded-full bg-slate-400 text-white w-[30px] h-[30px] flex 
                     items-center justify-center'>1</span>
                     <div>
                       <Image src={"/images/faq/products.svg"} width={100} height={100}
@@ -81,7 +82,7 @@ const Home = () => {
                     </div>
                   </li>
                   <li className='faq__step relative flex items-start gap-5'>
-                    <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
+                    <span className='rounded-full bg-slate-400 text-white w-[30px] h-[30px] flex 
                     items-center justify-center'>2</span>
                     <div className='flex flex-col gap-4'>
                       <Image src={"/images/faq/select.svg"} width={100} height={100}
@@ -95,7 +96,7 @@ const Home = () => {
                     </div>
                   </li>
                   <li className='faq__step relative flex items-start gap-5'>
-                    <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
+                    <span className='rounded-full bg-slate-400 text-white w-[30px] h-[30px] flex 
                     items-center justify-center'>3</span>
                     <div className='flex flex-col gap-4'>
                     <Image src={"/images/faq/mail.svg"} width={100} height={100}
@@ -108,7 +109,7 @@ const Home = () => {
                     </div>
                   </li>
                   <li className='faq__step relative flex items-start gap-5'>
-                    <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
+                    <span className='rounded-full bg-slate-400 text-white w-[30px] h-[30px] flex 
                     items-center justify-center'>4</span>
                     <div className='flex flex-col gap-4'>
                     <Image src={"/images/faq/send.svg"} width={100} height={100}
@@ -120,7 +121,7 @@ const Home = () => {
                     </div>
                   </li>
                   <li className='faq__step relative flex items-start gap-5'>
-                    <span className='rounded-full bg-slate-400 w-[30px] h-[30px] flex 
+                    <span className='rounded-full bg-slate-400 text-white w-[30px] h-[30px] flex 
                     items-center justify-center'>5</span>
                     <div className='flex flex-col gap-4'>
                     <Image src={"/images/faq/congratulation.svg"} width={100} height={100}
