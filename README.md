@@ -12,3 +12,5 @@ Online shop for selling mailing lists. Frontend application written in Next.js +
 - cd my-next-app
 - npm i / install
 - npm rund dev
+
+#### Link: soon
