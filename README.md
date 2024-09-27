@@ -13,4 +13,4 @@ Online shop for selling mailing lists. Frontend application written in Next.js +
 - npm i / install
 - npm rund dev
 
-#### Link: soon
+#### Link: https://lucky-mailer.onrender.com/

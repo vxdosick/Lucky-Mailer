@@ -24,7 +24,7 @@ const addmails = () => {
                     <div className="mails__container container">
                       <h2 className='subtitle mb-9'>All mails</h2>
                       <div className="mails__products">
-                          <div className='mails__filter w-full border border-lightgray-300 py-3 
+                          {/* <div className='mails__filter w-full border border-lightgray-300 py-3 
                           rounded-md mb-11 px-5'>
                               <nav className='filter__menu'>
                                 <ul className='flex items-center justify-between'>
@@ -39,7 +39,7 @@ const addmails = () => {
                                     </li>
                                 </ul>
                               </nav>
-                          </div>
+                          </div> */}
                           <nav className="mails__menu mb-9">
                             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
                             lg:grid-cols-4
